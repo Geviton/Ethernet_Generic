@@ -44,7 +44,7 @@ class DNSClient
         @result 1 if aIPAddrString was successfully converted to an IP address,
                 else error code
     */
-    int inet_aton(const char *aIPAddrString, IPAddress& aResult);
+    int _inet_aton(const char *aIPAddrString, IPAddress& aResult);
 
     /** Resolve the given hostname to an IP address.
         @param aHostname Name to be resolved

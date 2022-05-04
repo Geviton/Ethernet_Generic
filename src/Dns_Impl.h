@@ -114,7 +114,7 @@ void DNSClient::begin(const IPAddress& aDNSServer)
 
 /////////////////////////////////////////////////////////
 
-int DNSClient::inet_aton(const char* address, IPAddress& result)
+int DNSClient::_inet_aton(const char* address, IPAddress& result)
 {
   uint16_t acc = 0; // Accumulator
   uint8_t dots = 0;
@@ -169,14 +169,14 @@ int DNSClient::getHostByName(const char* aHostname, IPAddress& aResult, uint16_t
   int ret = 0;
 
   // See if it's a numeric IP address
-  if (inet_aton(aHostname, aResult)) 
+  if (_inet_aton(aHostname, aResult)) 
   {
     // It is, our work here is done
     return 1;
   }
 
   // Check we've got a valid DNS server to use
-  if (iDNSServer == INADDR_NONE) 
+  if (iDNSServer == (IPAddress) INADDR_NONE) 
   {
     return INVALID_SERVER;
   }
