@@ -97,7 +97,7 @@
 #endif
 
 #include "Client.h"
-#include "Server.h"
+#include "dependecies/Server.h"
 #include "Udp.h"
 
 #if !defined(_ETG_LOGLEVEL_)
@@ -489,7 +489,7 @@ class EthernetClient : public Client
 
 ////////////////////////////////////////////////////////////////////////////////////
 
-class EthernetServer : public Server 
+class EthernetServer : public _Server 
 {
   private:
     uint16_t _port;
