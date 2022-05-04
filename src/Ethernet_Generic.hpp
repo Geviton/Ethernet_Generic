@@ -97,7 +97,7 @@
 #endif
 
 #include "Client.h"
-#include "dependecies/Server.h"
+#include "dependencies/Server.h"
 #include "Udp.h"
 
 #if !defined(_ETG_LOGLEVEL_)
