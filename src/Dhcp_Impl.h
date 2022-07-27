@@ -185,7 +185,7 @@ int DhcpClass::request_DHCP_lease()
       _dhcp_state = STATE_DHCP_START;
     }
 
-    if (result != 1 && ((millis() - startTime) > _timeout))
+    if (result != 1 && ((millis() - startTime) > 10000))
       break;
   }
 
